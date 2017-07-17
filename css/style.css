@@ -59,6 +59,7 @@ ul {
 }
 #submit {
     height: 30px;
+    width: 80px;
     margin-bottom: -20px;
     box-sizing: border-box;
     background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
