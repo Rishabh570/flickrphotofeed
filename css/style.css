@@ -7,7 +7,7 @@
 html {
   background-image: linear-gradient(to top, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
 }
-.container {
+.container-fluid {
     margin: auto;
     width: 100%;
     font-family: 'Fruktur', cursive;
@@ -38,6 +38,7 @@ ul {
     width: 100%;
     animation-name: fadeInLeftBig;
     animation-duration: 2500ms;
+    font-size: 5rem;
 }
 #main-heading h1 {
   opacity: 0.8;
@@ -53,6 +54,7 @@ ul {
     border-radius: 10px;
     border-bottom: 1.5px solid #eee;
     border-left: 1.5px solid #eee;
+    font-size: 1.6rem;
 }
 #input:hover {
   background-color: white;
@@ -66,36 +68,17 @@ ul {
     animation-name: fadeInLeftBig;
     animation-duration: 3700ms;
     border-radius: 3px;
+    font-size: 1.6rem;
 }
 #photos {
     height: 100%;
-    width: 70%;
-    float: left;
     display: inline-block;
     box-sizing: border-box;
-
 }
 
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#wiki {
-  float: right;
-  width: 25%;
-  height: 1773px;
-  padding-left: 5px;
-  margin-right: 0px;
-  margin-top: 50px;
-  box-sizing: border-box;
-  background-image: 
-
-}
 .grid {
     display: inline-block;
-    width: 24%;
+    width: 20%;
     height: 20%;
     margin: 15px;
     overflow: hidden;
@@ -276,4 +259,18 @@ ul {
 
 .fadeInRightBig {
   animation-name: fadeInRightBig;
+}
+
+
+/*----------MEDIA QUERIES---------------------------------------*/
+
+@media (max-width: 690px) {
+  .grid {
+    width: auto;
+}
+
+@media (max-width: 392px) {
+  .grid {
+    width: auto;
+    margin-left: -40px;
 }
