@@ -51,7 +51,7 @@ $('form').submit(function (evt) {
 
 		// AJAX Starts
 		function displayPhotos(data) {
-			var photoHTML += '<ul>';
+			var photoHTML = '<ul>';
 			$.each(data.items, function(i,photo) {
 				photoHTML += '<li class="grid">';
 				photoHTML += '<a href="' + photo.link + '" class="image">';
