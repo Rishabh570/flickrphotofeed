@@ -1,7 +1,8 @@
-var processing;
+var processing = false;
 
 // JavaScript source code
 $(document).ready(function () {
+
 $('form').submit(function (evt) {
 	evt.preventDefault();
 	var searchTerm = $('#input').val();
