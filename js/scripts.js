@@ -37,9 +37,8 @@ $('form').submit(function (evt) {
         if ( $(document).scrollTop() >= ( $(document).height() - $(window).height() ) {
 	    console.log('reached');
             processing = true;
-            $.getJSON(flickrAPI, flickrOptions, displayPhotos, function data() {
-		    processing = false;
-	    });
+            $.getJSON(flickrAPI, flickrOptions, displayPhotos);
+	    processing = false;
         }
     });
 	
