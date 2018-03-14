@@ -45,7 +45,7 @@ $('form').submit(function (evt) {
         if (processing) {
             return false;
 	}
-        if ( $(document).scrollTop() >= ($(document).height() - $(window).height())) {
+        if ( $(document).scrollTop() >= ($(document).height() - $(window).height())*0.7) {
 	        console.log('reached');
                 processing = true;
 
