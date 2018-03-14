@@ -7,7 +7,7 @@ function loadData() {
 	var streetViewUrl = 'https://maps.googleapis.com/maps/api/streetview?size=870x490&location=' + address + '';
 	
 	var myPic = '<img class="bgimg" alt="cant load the image" src="' + streetViewUrl + '">';
-	$('.top').css('background-image', 'url(' + streetViewUrl + ')');
+	$('.picture').css('background-image', 'url(' + streetViewUrl + ')');
 }
 
 $('form').submit(loadData);
