@@ -58,7 +58,7 @@ $('form').submit(function (evt) {
 				photoHTML += '<img src="' + photo.media.m + '"></a></li>';
 			});
 			photoHTML += '</ul>';
-			$('#photos').html(photoHTML);
+			$('#photos').append(photoHTML);
 		}
 		$.getJSON(flickrAPI, flickrOptions, displayPhotos);
 		processing = false;
