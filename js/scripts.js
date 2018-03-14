@@ -34,9 +34,9 @@ $('form').submit(function (evt) {
 // Fire AJAX every time page reaches 70% of height
     $(document).scroll(function(e){
 
-        if (processing)
+        if (processing) {
             return false;
-
+	}
         if ( $(document).scrollTop() >= ($(document).height() - $(window).height()) ) {
 	    console.log('reached');
             processing = true;
