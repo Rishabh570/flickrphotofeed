@@ -30,6 +30,8 @@ $('form').submit(function (evt) {
 
 // Fire AJAX every time page reaches 70% of height
 if ($(window).scrollTop() >= ($(document).height() - $(window).height())*0.7) {
+	document.write('Reached 70% of page');
+	console.log("Reached 70% of page");
     	var searchTerm = $('#input').val();
 
 	// AJAX Starts
