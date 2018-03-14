@@ -31,6 +31,7 @@ $('form').submit(function (evt) {
 
 }) //end submit
 
+
 // Fire AJAX every time page reaches 70% of height ##########################################
     $(document).scroll(function(e){
         var searchTerm = $('#input').val();
@@ -65,7 +66,4 @@ $('form').submit(function (evt) {
     });
 
 //############################################################################################
-	
 }); // end ready
-
-
