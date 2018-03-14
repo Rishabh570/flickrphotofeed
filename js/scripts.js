@@ -29,6 +29,7 @@ $('form').submit(function (evt) {
 }) //end submit
 	
 // Fire AJAX every time page reaches 70% of height
+     var processing;
     $(document).scroll(function(e){
 
         if (processing)
