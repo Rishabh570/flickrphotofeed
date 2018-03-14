@@ -37,7 +37,7 @@ $('form').submit(function (evt) {
         if (processing)
             return false;
 
-        if ( $(document).scrollTop() >= ( $(document).height() - $(window).height() ) {
+        if ( $(document).scrollTop() >= ($(document).height() - $(window).height()) ) {
 	    console.log('reached');
             processing = true;
             $.getJSON(flickrAPI, flickrOptions, displayPhotos);
