@@ -28,5 +28,11 @@ $('form').submit(function (evt) {
 
 }) //end submit
 
+// Fire AJAX every time page reaches 70% of height
+if ($(window).scrollTop() >= ($(document).height() - $(window).height())*0.7) {
+    $.getJSON(flickrAPI, flickrOptions, displayPhotos);
+}
+	
+	
 }); // end ready
 
