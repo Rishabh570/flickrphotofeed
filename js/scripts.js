@@ -12,7 +12,6 @@ $('form').submit(function (evt) {
 	var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 	var animal = searchTerm;
 	var flickrOptions = {
-		tags: animal,
 		format: "json",
 
 	};
@@ -37,7 +36,6 @@ $('form').submit(function (evt) {
 	var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
 	var animal = searchTerm;
 	var flickrOptions = {
-		tags: animal,
 		format: "json",
 	};
 
@@ -46,18 +44,18 @@ $('form').submit(function (evt) {
 	}
 
         if ( $(document).scrollTop() >= ($(document).height() - $(window).height())*0.7) {
-	        console.log('reached');
+	        console.log('reached');  // Testing statement
                 processing = true;
 
 		// AJAX Starts
 		function displayPhotos(data) {
-			var photoHTML = '<ul>';
+			var photoHTML;
 			$.each(data.items, function(i,photo) {
 				photoHTML += '<li class="grid">';
 				photoHTML += '<a href="' + photo.link + '" class="image">';
 				photoHTML += '<img src="' + photo.media.m + '"></a></li>';
 			});
-			photoHTML += '</ul>';
+
 			$('#photos').append(photoHTML);
 		}
 		$.getJSON(flickrAPI, flickrOptions, displayPhotos);
