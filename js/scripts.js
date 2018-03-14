@@ -30,8 +30,8 @@ $('form').submit(function (evt) {
 		$.getJSON(flickrAPI, flickrOptions, displayPhotos);
 
 }) //end submit
-	
-// Fire AJAX every time page reaches 70% of height
+
+// Fire AJAX every time page reaches 70% of height ##########################################
     $(document).scroll(function(e){
 
         if (processing) {
@@ -44,7 +44,7 @@ $('form').submit(function (evt) {
 	    processing = false;
         }
     });
-	
+//############################################################################################
 	
 }); // end ready
 
