@@ -28,18 +28,22 @@ $('form').submit(function (evt) {
 
 }) //end submit
 	
-}); // end ready
-
-   // Fire AJAX every time page reaches 70% of height
+// Fire AJAX every time page reaches 70% of height
     $(document).scroll(function(e){
 
         if (processing)
             return false;
 
-        if ( $(document).scrollTop() == $(document).height() ) {
+        if ( $(document).scrollTop() >= ( $(document).height() - $(window).height() ) {
+	    console.log('reached');
             processing = true;
             $.getJSON(flickrAPI, flickrOptions, displayPhotos, function data() {
 		    processing = false;
 	    });
         }
     });
+	
+	
+}); // end ready
+
+
