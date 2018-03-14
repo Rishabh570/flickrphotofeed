@@ -27,6 +27,8 @@ $('form').submit(function (evt) {
 		$.getJSON(flickrAPI, flickrOptions, displayPhotos);
 
 }) //end submit
+	
+}); // end ready
 
    // Fire AJAX every time page reaches 70% of height
     $(document).scroll(function(e){
@@ -34,14 +36,10 @@ $('form').submit(function (evt) {
         if (processing)
             return false;
 
-        if ($(window).scrollTop() >= ($(document).height() - $(window).height())*0.7){
+        if ( $(document).scrollTop() == $(document).height() ) {
             processing = true;
-            $.getJSON(flickrAPI, flickrOptions, displayPhotos);
-            processing = false;
+            $.getJSON(flickrAPI, flickrOptions, displayPhotos, function data() {
+		    processing = false;
+	    });
         }
     });
-
-	
-	
-}); // end ready
-
